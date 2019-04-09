@@ -1,0 +1,12 @@
+sources:
+{
+	airSensorDisplay.c
+}
+
+requires:
+{
+	api:
+	{
+		ma_airSensor = ma_airSensor.api
+	}
+}

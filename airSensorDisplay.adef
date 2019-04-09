@@ -1,0 +1,28 @@
+executables:
+{
+	airSensorDisplay = ( airSensorDisplayComponent )
+}
+
+processes:
+{
+	envVars:
+	{
+		LE_LOG_LEVEL = DEBUG
+	}
+
+	run:
+	{
+		( airSensorDisplay )
+	}
+
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}
+
+bindings:
+{
+	airSensorDisplay.airSensorDisplayComponent.ma_airSensor -> airSensor.ma_airSensor
+}
+
+version: 1.0.0
+maxFileSystemBytes: 512K
